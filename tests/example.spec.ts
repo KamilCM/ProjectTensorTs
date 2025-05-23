@@ -1,9 +1,10 @@
-
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('https://tensor.art/');
   await page.getByRole('button', { name: 'Back to Home' }).click();
+  await page.waitForTimeout(3000);
+
   await page.getByRole('link', { name: 'Home' }).click();
   await page.getByRole('link', { name: 'Models', exact: true }).click();
   await page.getByRole('link', { name: 'AI Tools' }).click();

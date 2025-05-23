@@ -7,9 +7,12 @@
   "main": "index.js",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.21"
+    "@types/node": "^22.15.21",
+    "prettier": "^3.5.3"
   },
-  "scripts": {},
+  "scripts": {
+    "test:no-timeout": "npx playwright test --timeout=0 --headed --debug"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KamilCM/ProjectTensorTs.git"
