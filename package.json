@@ -11,6 +11,7 @@
     "prettier": "^3.5.3"
   },
   "scripts": {
+    "test": "npx playwright test",
     "test:no-timeout": "npx playwright test --timeout=0 --headed --debug"
   },
   "repository": {
