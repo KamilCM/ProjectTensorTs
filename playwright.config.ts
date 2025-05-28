@@ -38,7 +38,14 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 1600, height: 1200 },
+        viewport: { width: 1400, height: 1080 },
+        launchOptions: {
+          args: [
+            '--start-fullscreen', // fullscreen na starcie
+            '--window-position=0,0', // lewy górny róg pierwszego ekranu
+            '--window-size=1400,1080', // wymiar dokładnie do ekranu
+          ],
+        },
       },
     },
     // {
